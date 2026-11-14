@@ -5,13 +5,21 @@ const API_URL = 'https://openlibrary.org';
 
 // Checks whether an Open Library key has the correct format.
 function isValidOpenLibraryKey(key, type) {
-  const patterns = {
-    work: /^\/works\/OL\d+W$/,
-    edition: /^\/books\/OL\d+M$/,
-    author: /^\/authors\/OL\d+A$/,
-  };
+   if (typeof key !== 'string') return false;
 
-  return typeof key === 'string' && patterns[type]?.test(key);
+  if (type === 'work') {
+    return /^\/works\/OL\d+W$/.test(key);
+  }
+
+  if (type === 'edition') {
+    return /^\/books\/OL\d+M$/.test(key);
+  }
+
+  if (type === 'author') {
+    return /^\/authors\/OL\d+A$/.test(key);
+  }
+
+  return false;
 }
 
 /*------------------------------------Get Trending Books-----------------------------------*/
