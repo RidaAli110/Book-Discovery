@@ -3,6 +3,17 @@ import { getPublishYear, formatPublishDate } from '../utils/date-utils.js';
 
 const API_URL = 'https://openlibrary.org';
 
+// Checks whether an Open Library key has the correct format.
+function isValidOpenLibraryKey(key, type) {
+  const patterns = {
+    work: /^\/works\/OL\d+W$/,
+    edition: /^\/books\/OL\d+M$/,
+    author: /^\/authors\/OL\d+A$/,
+  };
+
+  return typeof key === 'string' && patterns[type]?.test(key);
+}
+
 /*------------------------------------Get Trending Books-----------------------------------*/
 export async function getTrendingBooks() {
   try {
@@ -41,6 +52,10 @@ export async function searchBook(book, signal) {
 /*-----------------------------------Fetch Author details-----------------------------------*/
 export async function fetchAuthor(authorKey) {
   try {
+    if (!isValidOpenLibraryKey(authorKey, 'author')) {
+      throw new Error('Invalid author key');
+    }
+
     const res = await fetch(`${API_URL}${authorKey}.json`);
     if (!res.ok) {
       throw new Error('Failed to fetch author data');
@@ -55,6 +70,10 @@ export async function fetchAuthor(authorKey) {
 /*-------------------------------------Get Book Details-------------------------------------*/
 export async function getBookDetails(key) {
   try {
+    if (!isValidOpenLibraryKey(key, 'work')) {
+      throw new Error('Invalid work key');
+    }
+
     const res = await fetch(`${API_URL}${key}.json`);
     if (!res.ok) {
       throw new Error('Failed to fetch book details');
@@ -101,7 +120,11 @@ export async function displayBookEditionInfo(
 
   // Fetch's the edition details using the earliest editions key.
   const editionDetails = await fetchEditionDetails(earliestEdition.key);
-  
+
+  if (!editionDetails) {
+    return;
+  }
+
   // Display the information returned
   pages.textContent = editionDetails.number_of_pages || 'Not available';
   publishDate.textContent = formatPublishDate(editionDetails.publish_date);
@@ -112,6 +135,10 @@ export async function displayBookEditionInfo(
 /*-------------------------Fetch edition key using the book workKey-------------------------*/
 export async function fetchEditionKey(workKey) {
   try {
+    if (!isValidOpenLibraryKey(workKey, 'work')) {
+      throw new Error('Invalid work key');
+    }
+
     const res = await fetch(
       `${API_URL}${workKey}/editions.json?limit=200&offset=0`,
     );
@@ -130,6 +157,10 @@ export async function fetchEditionKey(workKey) {
 /*------------------------Fetch edition details using the edition key------------------------*/
 export async function fetchEditionDetails(editionKey) {
   try {
+    if (!isValidOpenLibraryKey(editionKey, 'edition')) {
+      throw new Error('Invalid edition key');
+    }
+
     const res = await fetch(`${API_URL}${editionKey}.json`);
 
     if (!res.ok) {
@@ -177,6 +208,10 @@ export async function getBookOfTheDay() {
 /*-------------------------------------Get Selected Genre-------------------------------------*/
 export async function getGenreBooks(genre) {
   try {
+    if (typeof genre !== 'string' || !/^[a-z0-9_-]+$/i.test(genre)) {
+      throw new Error('Invalid genre');
+    }
+
     const res = await fetch(`${API_URL}/subjects/${genre}.json?limit=30`);
 
     if (!res.ok) {
