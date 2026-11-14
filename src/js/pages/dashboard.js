@@ -204,6 +204,7 @@ function toggleClearBtn() {
 
 function clearInput() {
   input.value = '';
+  resultsContainer.style.display = 'none';
   toggleClearBtn();
 }
 
