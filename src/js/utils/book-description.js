@@ -18,6 +18,21 @@ export function displayBookDescription(description, descVariable) {
     return;
   }
 
+  // Remove Markdown links, including their link text and URLs
+  descriptionText = descriptionText.replace(
+    /\[([^\]]+)\]\(https?:\/\/[^)]+\)/g,
+    '',
+  );
+
+  // Remove Markdown heading symbols
+  descriptionText = descriptionText.replace(/^#{1,6}\s*/gm, '');
+
+  // Remove Markdown formatting symbols
+  descriptionText = descriptionText.replace(/[*_`~]/g, '');
+
+  // Remove unnecessary whitespace
+  descriptionText = descriptionText.trim();
+
   // Shorten descriptions to 300 letters, ending at a full stop
   if (descriptionText.length > 300) {
     const shortenedText = descriptionText.slice(0, 300);
@@ -27,7 +42,6 @@ export function displayBookDescription(description, descVariable) {
       lastFullStop !== -1
         ? shortenedText.slice(0, lastFullStop + 1)
         : `${shortenedText}...`;
-        
   } else {
     descVariable.textContent = descriptionText;
   }
