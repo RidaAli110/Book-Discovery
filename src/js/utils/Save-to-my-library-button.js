@@ -1,4 +1,4 @@
-import { loadSavedBooks, saveBookToLocalStorage } from "./save-to-books.js";
+import { loadSavedBooks, saveBookToLocalStorage } from './save-to-books.js';
 
 /*------------------------------Event Listener For Save Button------------------------------*/
 export function handleSavedBook(saveBtn, book, msg) {
@@ -18,6 +18,7 @@ export function updateSaveButtonText(saveBtn, book, msg) {
 
   if (isBookAlreadySaved) {
     saveBtn.textContent = msg;
+    saveBtn.classList.add('saved');
   } else {
     saveBtn.textContent = 'Save to Library';
   }

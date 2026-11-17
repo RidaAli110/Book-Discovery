@@ -75,6 +75,10 @@
   padding: 0.5rem 0.75rem;
 }
 
+.saved {
+  background: transparent;
+  color: var(--secondary-text);
+}
 .save:hover {
   background-color:transparent;
   border: 1px solid var(--borders-panels);

@@ -63,16 +63,15 @@
   opacity: 1;
 }
 
-
 /* Saved book cards */
 #saved-books-grid {
   display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 250px));
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 250px));
   gap: 1rem;
   list-style: none;
 }
-
 
 .saved-book-card {
   display: flex;
@@ -154,15 +153,10 @@
   background-color: var(--hover-btn);
 }
 
-/* media queries */
-@media (min-width: 600px) {
-  #saved-books-grid {
-    justify-content: start;
-  }
-}
 
-@media (min-width: 750px) {
+/* media queries */
+@media (min-width: 700px) {
   #saved-books-grid {
-    margin: 1.5rem 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 250px));
   }
 }
