@@ -18,8 +18,9 @@ export function updateSaveButtonText(saveBtn, book, msg) {
 
   if (isBookAlreadySaved) {
     saveBtn.textContent = msg;
-    saveBtn.classList.add('saved');
   } else {
     saveBtn.textContent = 'Save to Library';
+    
   }
+  saveBtn.classList.toggle('saved', isBookAlreadySaved);
 }
