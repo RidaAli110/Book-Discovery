@@ -73,6 +73,10 @@ main {
   padding: 0.8rem 1.7rem;
   font: inherit;
   font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .save-btn:hover {
@@ -192,7 +196,7 @@ main {
   }
 }
 
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
   .additional-details {
     margin-top: 3rem;
   }
