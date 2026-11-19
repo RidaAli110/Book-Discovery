@@ -18,9 +18,9 @@ Book Discovery is a responsive website built with vanilla JavaScript, with book 
   <img src="./assets/screenshots/mobile-genre-results.png" width="140" alt="Book Discovery mobile genre results page">
 </p>
 
-**[Live Demo:]**(https://book-discovery-six.vercel.app)
+[**Live Demo:**](https://book-discovery-six.vercel.app)
 
-**[GitHub Repository:]**(https://github.com/RidaAli110/Book-Discovery.git)
+[**GitHub Repository:**](https://github.com/RidaAli110/Book-Discovery.git)
 
 ## About The Project
 
