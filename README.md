@@ -18,9 +18,9 @@ Book Discovery is a responsive website built with vanilla JavaScript, with book 
   <img src="./assets/screenshots/mobile-genre-results.png" width="140" alt="Book Discovery mobile genre results page">
 </p>
 
-**Live Demo:** [https://book-discovery-six.vercel.app]
+**[Live Demo:]**(https://book-discovery-six.vercel.app)
 
-**GitHub Repository:** [https://github.com/RidaAli110/Book-Discovery.git]
+**[GitHub Repository:]**(https://github.com/RidaAli110/Book-Discovery.git)
 
 ## About The Project
 
@@ -62,7 +62,7 @@ Follow these instructions to run the project locally.
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/RidaAli110/Book-Discovery.git]
+   git clone https://github.com/RidaAli110/Book-Discovery.git
    ```
 
 2. Navigate into the project folder:
@@ -72,6 +72,8 @@ Follow these instructions to run the project locally.
    ```
 
 3. Open the project in your preferred code editor.
-
+ ```bash
+   code .
+   ```
 4. Start the development server.
 
