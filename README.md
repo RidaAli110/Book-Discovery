@@ -7,10 +7,6 @@ Users can explore current trending books, discover books across different genres
   <a href="https://book-discovery-six.vercel.app">
     🌐 <strong>Live Demo</strong>
   </a>
-  &nbsp; | &nbsp;
-  <a href="https://github.com/RidaAli110/Book-Discovery">
-    💻 <strong>GitHub Repository</strong>
-  </a
 
 - [Preview](#preview)
 - [Features](#features)
