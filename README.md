@@ -3,6 +3,15 @@
 Book Discovery is a responsive website built with vanilla JavaScript, with book data fetched from the [Open Library API](https://openlibrary.org/developers/api).  
 Users can explore current trending books, discover books across different genres, view detailed book information and build their own personal library by saving books that interest them.
 
+<p align="center">
+  <a href="https://book-discovery-six.vercel.app">
+    🌐 <strong>Live Demo</strong>
+  </a>
+  &nbsp; | &nbsp;
+  <a href="https://github.com/RidaAli110/Book-Discovery">
+    💻 <strong>GitHub Repository</strong>
+  </a
+
 - [Preview](#preview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -26,10 +35,6 @@ Users can explore current trending books, discover books across different genres
   <img src="./assets/screenshots/mobile-my-library.png" width="150" alt="Book Discovery mobile My Library page">
   <img src="./assets/screenshots/mobile-genre-results.png" width="140" alt="Book Discovery mobile genre results page">
 </p>
-
-**Live Demo:**  https://book-discovery-six.vercel.app
-
-**GitHub Repository:**  https://github.com/RidaAli110/Book-Discovery.git
 
 ## Features
 
