@@ -3,6 +3,14 @@
 Book Discovery is a responsive website built with vanilla JavaScript, with book data fetched from the [Open Library API](https://openlibrary.org/developers/api).  
 Users can explore current trending books, discover books across different genres, view detailed book information and build their own personal library by saving books that interest them.
 
+- [Preview](#preview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [What I Learned](#what-i-learned)
+- [Challenges](#challenges)
+- [Future Improvements](#future-improvements)
+
 ## Preview
 
 ### Desktop
