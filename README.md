@@ -5,8 +5,8 @@ Users can explore current trending books, discover books across different genres
 
 - [Preview](#preview)
 - [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
 - [What I Learned](#what-i-learned)
 - [Challenges](#challenges)
 - [Future Improvements](#future-improvements)
