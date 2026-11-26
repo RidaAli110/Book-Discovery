@@ -52,6 +52,10 @@ Users can explore current trending books, discover books across different genres
 - JavaScript
 - [Open Library API](https://openlibrary.org/developers/api)
 
+### Icons
+
+- [Lucide Icons](https://lucide.dev/) – Used for interface icons.
+
 ## Getting Started
 
 Follow these instructions to run the project locally.
